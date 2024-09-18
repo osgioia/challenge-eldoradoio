@@ -4,7 +4,12 @@
   "description": "Coding Interview Backend Level 3",
   "main": "src/index.ts",
   "scripts": {
-    "test": "jest e2e"
+    "test": "jest e2e",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:push": "prisma db push",
+    "start": "ts-node src/index.ts"
   },
   "author": "El Dorado Dev Team",
   "license": "ISC",
@@ -17,6 +22,11 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@hapi/hapi": "^21.3.10"
+    "@hapi/boom": "^10.0.1",
+    "@hapi/hapi": "^21.3.10",
+    "@prisma/client": "^5.19.1",
+    "prisma": "^5.19.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0"
   }
 }
